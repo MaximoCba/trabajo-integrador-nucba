@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+     min-height: 1100px;
+     padding: 0;
+     background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+     background-color: #a3bded;
+     background-repeat: no-repeat;
+     display: flex;
+     flex-direction: column;
+}
+
+.main {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.459), rgba(255, 255, 255, 0.363));
+    width: 80%;
+    margin: auto;
+    padding: .7em;
+    overflow: hidden;
+    border-radius: 1em;
+
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: .6em;
+    animation: mostrar 1.5s ease-in-out;
+}
+
+@keyframes mostrar {
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.main__figure{
+    overflow: hidden;
+    border-radius: 1em;
+    background-color: #D798F8;
+    display: flex;
+}
+
+.main__img {
+    width: 80%;
+    margin: auto;
+    max-width: 60vw;
+}
+
+.main__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 3em .7em;
+    text-align: center;
+}
+
+.main__form {
+    display: grid;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.main__input {
+    width: 90%;
+    max-width: 500px;
+    outline: none;
+    border: none;
+    padding: 1em;
+    font: inherit;
+    border-radius: .6em;
+}
+
+.main__input--send {
+    background-color: #DC3F31;
+    color: #fff;
+    font-weight: 600;
+}
+
+.main__title {
+    font-size: 2.3rem;
+}
+
+.main__paragraph {
+    margin: .3em 0;
+}
+
+.main__icon {
+    width: 30px;
+    height: 30px;
+}
+
+.main__social {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-auto-columns: max-content;
+    gap: 1em;
+}
+
+.main__link {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: .6em 1.5em;
+}
+
+.main__link:hover {
+    background-color: #fff;
+}
+
+header{
+    background-color: #6991c7;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo-header img{
+    width: 50px;
+}
+
+.nav-menu ul{
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li{
+    margin-right: 1rem;
+}
+
+.nav-menu a{
+    color: #fff;
+}
+
+.nav-menu a:hover {
+    color: #4ad295;
+}
+
+.nav-menu li:last-child{
+    background:#4ad295;
+    padding: .25rem .75rem;
+    border-radius: 1rem;
+}
+
+.nav-menu li:last-child:hover{
+    background: transparent;
+    border: 2px solid #4ad295;
+}
+
+.menu-icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.menu-icon, #check{
+    display: none;
+}
+
+
+@media (max-width:768px){
+    .checkbtn{
+        display: block;
+    }
+    .menu-icon{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .nav-menu ul{
+        display: block;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        background: #222;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+    .nav-menu ul li{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .nav-menu ul li:last-child{
+        background: none;
+        padding: 1rem;
+    }
+    #check:checked ~ ul{
+        left: 0;
+        transition: all .25s;
+    }
+}
+
+
+
+/* FOOTER */
+
+
+footer{
+    padding: 150px 0 0 0;
+    margin: 0;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background: #222;
+    color: #fff;
+}
+
+footer .titulo-seccion{
+    font-size: 40px;
+    font-family: var(--fontsOpenSans);
+}
+
+footer .copy {
+    color: #fff;
+    font-size: 18px;
+    font-family: var(--fontsOpenSans);
+}
+
+.redes-sociales{
+    display: flex;
+    justify-content: center;
+    background: #222;
+    color: #fff;
+}
+
+.redes-sociales i {
+    font-size: 40px;
+    padding: 0 20px 0 20px;
+    color: #fff;
+    cursor: pointer;
+    
+}
